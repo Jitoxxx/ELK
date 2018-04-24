@@ -34,6 +34,12 @@ sudo vi /etc/ssl/openssl.conf
 #add at the end
 subjectAltName = IP: IPELKSERVER
 
+#Change IP address in clean-elasticsearch.sh
+#This will clean the last entry that passes 7 days everyday
+sudo vi /etc/elasticsearch/clean-elasticsearch.sh
+crontab -e
+# go to the bottem and add: 59 23 * * * /etc/elasticsearch/clean-elasticsearh.sh
+
 # START and Enable all services
 sudo systemctl start elasticsearch
 sudo systemctl enable elasticsearch
