@@ -1,0 +1,6 @@
+# To allow connections from remote users, set this parameter to a non-loopback address.
+#FILL IN SERVERHOST AND UNCOMMENT, FILL IN ELASTICSEARCH IP
+server.host: IPADDRESS ELKSERVER
+
+# The URL of the Elasticsearch instance to use for all your queries.
+elasticsearch.url: "http://ELASTICSEARCHIP:9200"
