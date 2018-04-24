@@ -19,8 +19,16 @@ echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee 
 # Elasticsearch
 sudo apt-get update && sudo apt-get install elasticsearch
 
+#Change IPADDRESS
+
+sudo vi /etc/elasticsearch/elasticsearch.yml
+
 # Kibana
 sudo apt-get update && sudo apt-get install kibana
+
+#Change IPADDRESS
+
+sudo vi /etc/kibana/kibana.yml
 
 # Nginx
 sudo apt-get -y install nginx
@@ -31,6 +39,8 @@ sudo -v
 echo "kibanaadmin:`openssl passwd -apr1`" | sudo tee -a /etc/nginx/htpasswd.users
 
 /etc/nginx/sites-available/default THIS IS THE RIGHT DEFAULT FILE
+#you can find the same file called default.conf with the right configs
+#just change IPaddress
 
 sudo nginx -t
 
@@ -39,6 +49,14 @@ sudo ufw allow 'Nginx full'
 
 # Logstash
 sudo apt-get update && sudo apt-get install logstash
+
+#Change IPADDRESS
+
+sudo vi /etc/logstash/conf.d/output.conf
+
+#change to your desired ports
+
+sudo vi /etc/logstash/conf.d/input.conf
 
 # enerate ssl
 sudo mkdir -p /etc/pki/tls/certs
