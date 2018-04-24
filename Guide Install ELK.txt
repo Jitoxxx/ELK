@@ -1,3 +1,4 @@
+#Code by Joachim Hermans
 #Code for installing ELK VERSION 6.X
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo apt-get -y update && sudo apt-get -y upgrade
