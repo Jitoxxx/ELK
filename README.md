@@ -58,7 +58,7 @@ sudo vi /etc/logstash/conf.d/output.conf
 
 sudo vi /etc/logstash/conf.d/input.conf
 
-# enerate ssl
+# Generate ssl
 sudo mkdir -p /etc/pki/tls/certs
 
 sudo mkdir /etc/pki/tls/private
