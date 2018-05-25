@@ -22,15 +22,21 @@ if [ ! -z $1 ]; then
     daysback=$1
 fi
 
-start=7
+start=8
 end=`expr $start \+ $daysback`
 
 if [ $? == 0 ]; then
     for i in `seq $start $end`; do
         d=`date --date "$i days ago" +"%Y.%m.%d"`
-        curl -XDELETE 'ELASTICSEARCHIP:9200/logstash-'$d
-        echo "    this is the date: " $d
+        curl -X DELETE "ELASTICSEARCHIP/logstash-"$d
+        curl -X DELETE "ELASTICSEARCHIP/packetbeat-6.2.3-"$d
+        curl -X DELETE "ELASTICSEARCHIP/routecollector-"$d
+        echo "  this is the date: " $d
     done
 else
     echo "Invalid number of days specified, aborting"
 fi
+
+
+
+~
