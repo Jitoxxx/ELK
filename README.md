@@ -20,5 +20,3 @@ there is a file called "Installation-Guide.md", this will give you a guide on ho
 
 Issues:
 There is an issue with the VPN-RR's that is not yet resolved.
-
-Hope it works and you can contact me with issues if you find any.
