@@ -16,7 +16,7 @@ The file structure:
 the directories represent those of the ubuntu, example: "ELKExabgp/etc" goes into etc folder on your ubuntu. 
 
 Installation instructions:
-there is a file called "Installation Guide", this will give you a guide on how to install the whole project.
+there is a file called "Installation-Guide.md", this will give you a guide on how to install the whole project.
 
 Issues:
 There is an issue with the VPN-RR's that is not yet resolved.
