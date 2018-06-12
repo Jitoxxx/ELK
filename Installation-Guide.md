@@ -28,7 +28,7 @@ Change IPADDRESS in the following file
 ```
 sudo vi /etc/elasticsearch/elasticsearch.yml
 ```
-# Kibana
+# Kibana install
 ```
 sudo apt-get update && sudo apt-get install kibana
 ```
@@ -36,7 +36,7 @@ Change IPADDRESS in the following file
 ```
 sudo vi /etc/kibana/kibana.yml
 ```
-# Nginx 
+# Nginx install
 ```
 sudo apt-get -y install nginx
 sudo -v
@@ -53,7 +53,7 @@ sudo nginx -t
 sudo ufw allow 'Nginx full'
 ```
 
-# Logstash
+# Logstash install
 ```
 sudo apt-get update && sudo apt-get install logstash
 ```
